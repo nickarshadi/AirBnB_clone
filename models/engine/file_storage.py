@@ -1,17 +1,29 @@
 #!/usr/bin/python3
-""" File Storage Module. """
+"""File Storage Module."""
 import json
 import datetime
 import os
 import models.base_model
+import models.user
+import models.city
+import models.place
+import models.review
+import models.state
 
-classes = {"BaseModel": models.base_model.BaseModel}
+classes = {
+    "BaseModel": models.base_model.BaseModel,
+    "User": models.user.User,
+    "City": models.city.City,
+    "Place": models.place.Place,
+    "Review": models.review.Review,
+    "State": models.state.State
+}
 
 
 class FileStorage():
-    """Serialize instances to a JSON file and deserialize
-        JSON files to a instances.
+    """Serialize instances to a JSON file and deserialize.
 
+    JSON files to a instances.
     """
 
     __file_path = "file.json"
@@ -22,8 +34,10 @@ class FileStorage():
         return FileStorage.__objects
 
     def new(self, obj):
-        """Set in obj the obj with key
-            <obj class name>.id."""
+        """Set in obj the obj with key.
+
+        <obj class name>.id.
+        """
         key = "{}.{}".format(type(obj).__name__, obj.id)
         FileStorage.__objects[key] = obj
 
