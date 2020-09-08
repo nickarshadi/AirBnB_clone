@@ -1,6 +1,5 @@
-#!/usr/bin/python3
-"""__INIT__ Module. """
-from engine.file_storage import FileStorage
+"""Module for FileStorage autoinit."""
+from models.engine.file_storage import FileStorage
 
 
 storage = FileStorage()
