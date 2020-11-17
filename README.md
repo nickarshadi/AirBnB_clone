@@ -15,7 +15,7 @@ This project starts by creates a console using python, to manage the "back-end" 
 ## Requirements
 This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.4.3)
 ## Installation
-* Clone this repository: `git clone https://github.com/LuAnVaRmO/AirBnB_clone`
+* Clone this repository: `git clone https://github.com/nickarshadi/AirBnB_clone`
 * Access AirBnb directory: `cd AirBnB_clone`
 ## Usage
 * Run hbnb: `./console` and enter `commands`
